@@ -7,7 +7,7 @@ export Target
 export add_site!, crawl_sites!, current_sites, reset_crawler!
 
 # == insert global variables and functins here ==
-mutable struct Target
+Base.@kwdef mutable struct Target
     url::String
     finished::Bool = false
     finsish_time::Union{DateTime,Nothing} = nothing
