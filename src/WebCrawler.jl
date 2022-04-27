@@ -29,6 +29,12 @@ function current_sites()
     copy(sites)
 end
 
+function index_site!(site::Target)
+    site.finished = true
+    site.finish_time = now()
+    println("Site $(site.url) crawled.")
+end
+
 function reset_crawler!()
     empty!(sites)
 end
