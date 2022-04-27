@@ -10,7 +10,7 @@ export add_site!, crawl_sites!, current_sites, reset_crawler!
 Base.@kwdef mutable struct Target
     url::String
     finished::Bool = false
-    finsish_time::Union{DateTime,Nothing} = nothing
+    finish_time::Union{DateTime,Nothing} = nothing
 end
 
 const sites = Target[]
